@@ -1,11 +1,7 @@
 # 概要
 
 ```convert.js```でファイルの変換、```checker.js```でLUFSの測定が可能です。
-動作にはNode.jsが必要です。(以下のコマンドでインストールするにはHomebrewが必要です。)
-
-```必要ライブラリ
-brew install nodejs
-```
+注意：動作にはNode.jsが必要です。
 
 ## ライブラリ
 
