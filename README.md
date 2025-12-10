@@ -1,6 +1,6 @@
 # 概要
 
-```convert.js```でファイルの変換、```checker.js```でLUFSの測定が可能です。
+```convert.js```でファイルの変換、```checker.js```でLUFSの測定が可能です。  
 注意：動作にはNode.jsが必要です。
 
 ## ライブラリ
