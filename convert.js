@@ -1,4 +1,5 @@
 const ffmpeg = require("fluent-ffmpeg");
+const path = require("path");
 const { exec } = require("child_process");
 const readline = require("readline");
 
@@ -173,18 +174,16 @@ async function convert(
   data,
   opts
 ) {
-  const filter = [
-    `loudnorm=I=${targetLUFS}`,
-    `TP=${targetTP}`,
-    `LRA=${data.input_lra}`,
-    `measured_I=${data.input_i}`,
-    `measured_TP=${data.input_tp}`,
-    `measured_LRA=${data.input_lra}`,
-    `measured_thresh=${data.input_thresh}`,
-    `offset=${data.target_offset}`,
-    `linear=true:print_format=summary`,
-  ].join(":");
-
+  const filter = `loudnorm=
+  I=${targetLUFS}:
+  TP=${targetTP}:
+  LRA=11:
+  measured_I=${data.input_i}:
+  measured_TP=${data.input_tp}:
+  measured_LRA=${data.input_lra}:
+  measured_thresh=${data.input_thresh}:
+  offset=${data.target_offset}`;
+  
   const audioCodecMap = {
     1: "aac",
     2: "libopus",
