@@ -1,7 +1,10 @@
-node_modules/
+# OS & Environment
 .DS_Store
+Thumbs.db
+node_modules/
+.vscode/
 
-# 音声ファイル等
+# --- Audio Files ---
 *.mp3
 *.wav
 *.ogg
@@ -11,22 +14,26 @@ node_modules/
 *.m4a
 *.wma
 *.aiff
-*.alac
-*.pcm
 *.aif
 *.aifc
-*.aiffc
-*.aifc
+*.alac
+*.pcm
+*.dsf
+*.dff
 
-# 動画ファイル等
+# --- Video Files ---
 *.mp4
 *.avi
 *.mkv
 *.mov
 *.wmv
 *.flv
-*.mpeg
-*.mpg
 *.webm
-*.mpeg4
-*.mpeg-4
+*.mpg
+*.mpeg
+*.m4v
+*.3gp
+*.ts
+
+# Specific Processed Files (Output by script)
+*_processed.*
