@@ -16,7 +16,7 @@ function ask(q) {
   console.log("[1] Checker (詳細解析・LUFS測定)");
   console.log("[2] Converter (ラウドネス正規化・エンコード)");
 
-  const choice = await ask("\nどちらを起動しますか？ > ");
+  const choice = await ask("\nどちらを起動しますか？\n> ");
   const trimmedChoice = choice.trim();
 
   let scriptName = "";
