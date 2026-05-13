@@ -159,7 +159,7 @@ async function convert(
 
     const outputName = `${path.parse(input).name}_processed.${ext}`;
     const targetTP = parseFloat(
-      await ask(`測定LUFS: ${data.input_i}\nTrue Peak (TP) 目標値 > `),
+      await ask(`測定LUFS: ${data.input_i}\nTrue Peak (TP) 目標値\n> `),
     );
 
     let vCodec, vPreset, vMethod, crf, vBitrate;
