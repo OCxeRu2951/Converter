@@ -1,0 +1,7 @@
+{
+  "supportedExtensions": [
+    ".mp3", ".wav", ".ogg", ".flac", ".aac", ".opus", ".m4a", ".wma",
+    ".aiff", ".aif", ".aifc", ".alac", ".pcm", ".dsf", ".dff",
+    ".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm", ".mpg", ".mpeg", ".ts"
+  ]
+}

@@ -2,6 +2,7 @@ const { exec } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 const readline = require("readline");
+const config = require("./json/config.json");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -13,33 +14,7 @@ async function ask(q) {
 }
 
 async function selectFile() {
-  const supportedExts = [
-    ".mp3",
-    ".wav",
-    ".ogg",
-    ".flac",
-    ".aac",
-    ".opus",
-    ".m4a",
-    ".wma",
-    ".aiff",
-    ".aif",
-    ".aifc",
-    ".alac",
-    ".pcm",
-    ".dsf",
-    ".dff",
-    ".mp4",
-    ".avi",
-    ".mkv",
-    ".mov",
-    ".wmv",
-    ".flv",
-    ".webm",
-    ".mpg",
-    ".mpeg",
-    ".ts",
-  ];
+  const supportedExts = config.supportedExtensions;
 
   const rootDir = "./";
   const files = fs.readdirSync(rootDir).filter((file) => {
